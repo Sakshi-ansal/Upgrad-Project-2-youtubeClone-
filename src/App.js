@@ -22,22 +22,31 @@ class App extends Component {
     });
     this.setState({videos:response.data.items,selectedVideo:response.data.items[0]});
   }
+  onVideoSelect = (video) =>{
+    this.setState({selectedVideo:video})
+  }
+  componentDidMount(){
+    this.onSubmitHandler("upGrad");
+  }
   render(){
-    // const {selectedVideo} = this.state;
+    const {selectedVideo,videos} = this.state;
   return (
     <Grid justify="center" container spacing={10}>
-        <Grid item xs={12}>
+        <Grid item xs={11}>
            <Grid container spacing={10}>
              <Grid item xs={12}>
                  <Search onFormSubmit = {this.onSubmitHandler}/>
              </Grid>
              <Grid item xs={8}>
                  <VideoDetail 
-                //  video = {selectedVideo} 
+                 video = {selectedVideo} 
                  />
              </Grid>
              <Grid item xs={4}>
-                 <VideoList />
+                 <VideoList 
+                 videos = {videos}
+                 onVideoSelect = {this.onVideoSelect}
+                 />
              </Grid>
            </Grid>
         </Grid>
