@@ -10,14 +10,19 @@
     font-family: Arial, Helvetica, sans-serif; 
     vertical-align: middle!important;   
 }
+.Search_input:active{
+    border-color:lightgray!important;
+}
 /* CSS for Search button */
 .Search_button{
     border-radius: 0px;
     padding:0px 8px 0px 8px!important;
     font-family: Arial, Helvetica, sans-serif; 
     font-size:14px;
-    outline-color: lightgray;
+    border:0.8px solid lightgray!important;
+    background-color:white;
+    
 }
-.btn-outline-secondary{
-    border-color:lightgray!important;
+.Search_button:active{
+    border-color:rgb(10, 10, 114);
 }
