@@ -28,7 +28,7 @@ const VideoDetail=function({video}){
                     {video.snippet.channelTitle}
                 </Typography><br/><br/>
                 <h5 style={{color:'rgb(109, 105, 105)'}}>Comments</h5><br/>
-                {/* <Comment/> */}
+                <Comment/>
             </div>
         </Fragment>
     )

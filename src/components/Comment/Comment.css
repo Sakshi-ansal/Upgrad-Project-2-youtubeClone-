@@ -1,4 +1,4 @@
-/* .comment{
+.comment{
     margin-left: -40px;
 }
 .comment_name{
@@ -13,14 +13,14 @@
 .VideoDetail_comment{
      overflow-x: hidden;
      resize: horizontal;
-     display: inline-block; */
+     display: inline-block;
     /* no extra spaces */
-    /* padding: 0;
+    padding: 0;
     margin: 0;
     white-space: nowrap;
-   */
+  
     /* default widths */
-    /* width: 23em;
+    width: 23em;
     min-width: 2em;
     max-width: 30em;
 }
@@ -38,7 +38,7 @@
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAJUlEQVR4AcXJRwEAIBAAIPuXxgiOW3xZYzi1Q3Nqh+bUDk1yD9sQaUG/4ehuEAAAAABJRU5ErkJggg==");
     cursor: ew-resize;
 }
-.VideoDetail_commentBox::placeholder{
+input::placeholder{
     font-size:10px;
-    font-family:'Times New Roman', serif;  
-} */
+    font-family:'Courier New', Courier, monospace; 
+}
