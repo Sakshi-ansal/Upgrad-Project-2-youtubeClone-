@@ -1,7 +1,7 @@
 /* CSS for Input Box */
 .Search_input{
     color:gray;
-    height:27px;
+    height:29px;
     border:0.8px solid lightgray!important;
 }
 .Search_input::placeholder{
@@ -16,9 +16,10 @@
 /* CSS for Search button */
 .Search_button{
     border-radius: 0px;
-    padding:0px 8px 0px 8px!important;
+    padding:6px 12px 2px 12px!important;
     font-family: Arial, Helvetica, sans-serif; 
     font-size:14px;
+    margin-top: -50px!important;
     border:0.8px solid lightgray!important;
     background-color:white;
     

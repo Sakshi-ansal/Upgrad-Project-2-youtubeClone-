@@ -8,16 +8,24 @@ class Search extends Component{
   onChangeHandler = (event) =>{
     this.setState({searchVal:event.target.value})
   }
-  onSubmitHandler = (event) =>{
+  // onSubmitHandler = (event) =>{
+  //   const {searchVal} = this.state;
+  //   const {onFormSubmit} = this.props;
+  //   onFormSubmit(searchVal);
+  //   event.preventDefault();
+  // }
+  onClickHandler = (event) =>{
     const {searchVal} = this.state;
     const {onFormSubmit} = this.props;
     onFormSubmit(searchVal);
     event.preventDefault();
+    
   }
   render(){
+
     return(
-      <Paper style={{ padding: 7 }}>
-        <Grid container>
+      <Paper style={{ padding: 12 }}>
+        <Grid>
           <Grid xs={10} md={11} item style={{ paddingRight: 16 }} container justify="center" direction="row">
             <form onClick={this.onSubmitHandler}>
             <input
@@ -28,7 +36,7 @@ class Search extends Component{
             />&nbsp;
             <button
               className="Search_button"
-              // onClick={this.onClickHandler}
+              onClick={this.onClickHandler}
             >
               Search
             </button>

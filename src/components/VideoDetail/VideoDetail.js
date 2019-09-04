@@ -1,25 +1,37 @@
 import React,{Fragment} from 'react';
 import {Paper,Typography} from '@material-ui/core';
+import './VideoDetail.css';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css'
+import Comment from '../Comment/Comment';
 const VideoDetail=function({video}){
-    if(!video) return <div>Loading...</div>;
-    const videoSrc=`https://www.youtube.com/embed/${video.id.videoId}` 
+    
+    if(!video)return <div className="VideoDetail_notFound">No Videos Found</div>;
+    const videoSrc=`https://www.youtube.com/embed/${video.id.videoId}` ;
     return(
         <Fragment>
-            <Paper elevation={6} style={{height:'70%'}}>
-                <iframe frameBorder='0' height='100%' width='100%' title='Video Player' src={videoSrc}>
+            <Paper className="VideoDetail_paper1" style={{height:'30%',width:'96%',border:'none'}}>
+                <iframe  height='100%' width='100%' title='Video Player' src={videoSrc}>
 
                 </iframe>
             </Paper>
-            <Paper elevation={6} style={{padding:'15px'}}>
-                <Typography variant="h4">
-                    {video.snippet.title} - {video.snippet.channelTitle}
+            <div  style={{padding:'15px',width:'96%',border:'none'}}>
+                <div className="row">
+                <Typography className="col-sm-10" variant="h6" style={{fontSize:'16px'}}>
+                    {video.snippet.title} | {video.snippet.channelTitle} 
                 </Typography>
+                <div className="col-sm-1"></div>
+                <Typography className="col-sm-1">
+                    <i className="fa fa-heart heart"></i>
+                </Typography>
+                </div>
                 <Typography variant="subtitle1">
                     {video.snippet.channelTitle}
-                </Typography>
-                <Typography variant="subtitle2">{video.snippet.description}</Typography>
-            </Paper>
+                </Typography><br/><br/>
+                <h5 style={{color:'rgb(109, 105, 105)'}}>Comments</h5><br/>
+                {/* <Comment/> */}
+            </div>
         </Fragment>
     )
+    
 }
 export default VideoDetail;

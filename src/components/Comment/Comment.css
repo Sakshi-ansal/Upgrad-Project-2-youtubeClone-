@@ -1,0 +1,44 @@
+/* .comment{
+    margin-left: -40px;
+}
+.comment_name{
+    color:rgb(109, 105, 105);;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.comment_desc{
+    color:rgb(109, 105, 105);
+    font-family:'Times New Roman', serif;  
+}
+.VideoDetail_comment{
+     overflow-x: hidden;
+     resize: horizontal;
+     display: inline-block; */
+    /* no extra spaces */
+    /* padding: 0;
+    margin: 0;
+    white-space: nowrap;
+   */
+    /* default widths */
+    /* width: 23em;
+    min-width: 2em;
+    max-width: 30em;
+}
+.VideoDetail_comment > input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+.VideoDetail_comment > span {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: -16px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAJUlEQVR4AcXJRwEAIBAAIPuXxgiOW3xZYzi1Q3Nqh+bUDk1yD9sQaUG/4ehuEAAAAABJRU5ErkJggg==");
+    cursor: ew-resize;
+}
+.VideoDetail_commentBox::placeholder{
+    font-size:10px;
+    font-family:'Times New Roman', serif;  
+} */

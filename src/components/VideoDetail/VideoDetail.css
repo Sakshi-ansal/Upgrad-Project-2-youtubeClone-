@@ -1,0 +1,35 @@
+.VideoDetail_paper1{
+    margin-top:-40px;
+}
+.VideoDetail_comment::placeholder{
+    vertical-align: 0%;
+}
+.VideoDetail_cmnt_btn{
+    border-radius: 0px;
+    padding:6px 12px 2px 12px!important;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size:14px;
+    border:0.8px solid rgb(179, 174, 174)!important;
+    background-color:white!important;
+    color:rgb(73, 72, 72);
+}
+.VideoDetail_notFound{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:26px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif; 
+    color:rgb(105, 104, 104);
+}
+.heart {
+    color:red!important;
+    font-size:23px!important;
+    margin-left: 15px;
+    cursor:pointer;
+}
+.user{
+    color:rgb(88, 87, 87)!important;
+    font-size:20px!important;
+    margin-top: 10px;
+}

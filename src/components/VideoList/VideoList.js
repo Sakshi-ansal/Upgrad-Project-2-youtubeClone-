@@ -1,7 +1,8 @@
 import React from 'react';
 import {Grid} from '@material-ui/core';
 import VideoItem from '../VideoItem/VideoItem';
-const VideoList = ({videos , onVideoSelect}) =>{
+const VideoList = ({videos , onVideoSelect , mystatus}) =>{
+    // if(mystatus) return <div></div>;
     const listOfVideos= videos.map((video , id)=><VideoItem key={id} onVideoSelect={onVideoSelect} video={video}/>)
     
     return(
