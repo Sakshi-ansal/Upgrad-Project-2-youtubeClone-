@@ -1,15 +1,23 @@
-import React,{Fragment} from 'react';
+import React,{Fragment,Component} from 'react';
 import {Paper,Typography} from '@material-ui/core';
 import './VideoDetail.css';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css'
 import Comment from '../Comment/Comment';
 
 var someVariable="true";
-
-const VideoDetail=function({video}){
-    
-    if(!video)return <div className="VideoDetail_notFound">No Videos Found</div>;
-    const videoSrc=`https://www.youtube.com/embed/${video.id.videoId}` ;
+class VideoDetail extends Component{
+    state={
+        someVariable:"true"
+    }
+    onColorChange=()=>{
+        this.setState({
+            someVariable:"false"
+        })
+     }
+    render(){
+        const video=this.props.video;
+        if(!video)return <div className="VideoDetail_notFound">No Videos Found</div>;
+        const videoSrc=`https://www.youtube.com/embed/${video.id.videoId}` ;
     return(
         <Fragment>
             <Paper className="VideoDetail_paper1" style={{height:'27%',width:'96%',border:'none'}}>
@@ -25,7 +33,7 @@ const VideoDetail=function({video}){
                 <div className="col-sm-1"></div>
                 <Typography className="col-sm-1">
                     {/* <i className="fa fa-heart heart" onClick={onColorChange()}></i> */}
-                    <i className={someVariable==="true" ? "fa fa-heart heart" : "fa fa-heart heart1"} onClick={onColorChange()}></i>
+                    <i className={someVariable===this.state.someVariable ? "fa fa-heart heart" : "fa fa-heart heart1"} onClick={this.onColorChange}></i>
                 </Typography>
                 </div>
                 <Typography variant="subtitle1">
@@ -36,9 +44,7 @@ const VideoDetail=function({video}){
             </div>
         </Fragment>
     )
-    
+    }
 }
-const onColorChange=()=>{
-   someVariable="false";
-}
+
 export default VideoDetail;

@@ -8,12 +8,7 @@ class Search extends Component{
   onChangeHandler = (event) =>{
     this.setState({searchVal:event.target.value})
   }
-  // onSubmitHandler = (event) =>{
-  //   const {searchVal} = this.state;
-  //   const {onFormSubmit} = this.props;
-  //   onFormSubmit(searchVal);
-  //   event.preventDefault();
-  // }
+
   onClickHandler = (event) =>{
     const {searchVal} = this.state;
     const {onFormSubmit} = this.props;
