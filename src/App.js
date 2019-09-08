@@ -3,15 +3,13 @@ import './App.css';
 import Search from "./components/Search/Search";
 import VideoDetail from "./components/VideoDetail/VideoDetail";
 import VideoList from "./components/VideoList/VideoList";
-// import {Grid} from "@material-ui/core";
 import youtube from "./api/youtube";
-// import { height } from '@material-ui/system';
+
 
 class App extends Component {
   state={
     videos :[],
     selectedVideo:null,
-    // mystatus:'true'
   }
   onSubmitHandler = async (searchVal) => {
     const response = await youtube.get('search' , {
@@ -37,29 +35,10 @@ class App extends Component {
   }
  
   render(){
-    const {selectedVideo,videos,mystatus} = this.state;
+    const {selectedVideo,videos} = this.state;
     
   return (
-    // <Grid justify="center" container spacing={10}>
-    //     <Grid item xs={11}>
-    //        <Grid container spacing={10}>
-    //          <Grid className="container-fluid" item xs={12}>
-    //              <Search onFormSubmit = {this.onSubmitHandler}/>
-    //          </Grid>
-    //          <Grid item xs={8}>
-    //              <VideoDetail 
-    //              video = {selectedVideo} 
-    //              />
-    //          </Grid>
-    //          <Grid item xs={4}>
-                //  <VideoList 
-                //  videos = {videos}
-                //  onVideoSelect = {this.onVideoSelect}
-                //  />
-    //          </Grid>
-    //        </Grid>
-    //     </Grid>
-    // </Grid> 
+
   <Fragment>
     <div>
        <Search onFormSubmit = {this.onSubmitHandler} video = {selectedVideo} />
@@ -67,12 +46,11 @@ class App extends Component {
     <div className="container-fluid">
         <div className="row">
              <div className="col-sm-8">
-             <VideoDetail video = {selectedVideo} mystatus = {mystatus} />
+             <VideoDetail video = {selectedVideo}  />
              </div>&nbsp;&nbsp;&nbsp;&nbsp;
              <div className="col-sm-3">
                <VideoList 
                  videos = {videos}
-                 mystatus={mystatus}
                  onVideoSelect = {this.onVideoSelect}
                  />
              </div>
